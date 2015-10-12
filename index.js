@@ -3,6 +3,7 @@ var cheerio = require('cheerio');
 var vow = require('vow');
 var _ = require('lodash');
 var argv = require('minimist')(process.argv.slice(2));
+var fs = require('fs');
 
 var $;
 
@@ -13,7 +14,6 @@ if (argv['_'].length < 2) {
 
 var SINCE = parseInt(argv['_'][0]);
 var COUNT = parseInt(argv['_'][1]);
-
 
 var BASE_URL = 'https://umaar.com';
 var INTRO = 'Бла Бла Бла';
@@ -39,7 +39,7 @@ request(BASE_URL + '/dev-tips/', function (error, response, body) {
     }
   });
 
-  vow.all(promises).then(formatOutput).catch(function () {
+  vow.all(promises).done(formatOutput, function () {
     console.log('SOME PROMISES WERE REJECTED!', arguments);
   });
 
@@ -127,14 +127,15 @@ function formatOutput(postsArray) {
   output += '<cut />\n';
 
   posts.forEach(function (post) {
-    output += '<cut />\n';
-    output += _.template('<anchor>${number}</anchor> \
-      <h2>${number}. ${title} (${link})</h2>\n')(post);
+    output += _.template('<anchor>${number}</anchor>\
+<h2>${number}. ${title} (${link})</h2>\n')(post);
     output += post.text + '\n';
     output += _.template('<spoiler title="Посмотреть скринкаст">\
 <img src="${img}"/>\
-</spoiler>')(post);
+</spoiler>\n')(post);
   });
 
-  console.log(output);
+  var stream = fs.createWriteStream(_.template('texts/${since} - ${last}.html')({since: SINCE + 1, last: SINCE + COUNT}));
+  stream.write(output);
+  stream.close();
 }
