@@ -82,7 +82,7 @@
 
 <anchor>21</anchor><h2>21. Подсветка выполняемого выражения</h2>
 <p>Когда исполнение кода остановлено, вы можете увидеть конкретное выражение, выполняемое в текущий момент. Оно подсвечивается темно-голубым цветом. Это также может быть полезно при отладке минифицированного кода.</p>
-<p><strong>Функциональность на данный момент доступна в Chrome Canary.</strong></p>
+<p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
 
 <p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
 
@@ -103,7 +103,7 @@
 <li>Упростился интерфейс, позволяющий вам подобрать цвет из палитры, включая альфа-канал.</li>
 <li>Появилось переключение формата отображения цвета (hex, rgba, hsla).</li>
 </ul>
-<p><strong>Функциональность на данный момент доступна в Chrome Canary.</strong></p>
+<p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
 
 <p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
 
@@ -117,28 +117,27 @@
 </ul>
 <p>Also, you may notice from a few Dev Tips ago (<a href="https://umaar.com/dev-tips/21-highlight-paused-statement/">21. highlight paused statement</a>) that when you navigate through the call stack, the exact column is highlighted.</p>
 
-<anchor>23</anchor><h2>23. </h2>
-<p>There are a few keyboard shortcuts when dealing with the debugger. A few are:</p>
+<anchor>23</anchor><h2>23. Включение точки останова и навигация по стеку вызовов при помощи горячих клавиш</h2>
+<p>При работе с отладчиком вам помогут несколько клавиатурных сокращений:</p>
 <ul>
-<li>Toggle a breakpoint while on a line: Cmd + B</li>
-<li>Select the next call frame: Ctrl + .</li>
-<li>Select the previous call frame: Ctrl + ,</li>
+<li>Включение/выключение точки останова на строке js-файла: <strong>Cmd + B</strong></li>
+<li>Выбор следующего фрейма в стеке вызовов: <strong>Ctrl + .</strong></li>
+<li>Выбор предыдущего фрейма в стеке вызовов: <strong>Ctrl + ,</strong></li>
 </ul>
-<p>Also, you may notice from a few Dev Tips ago (<a href="https://umaar.com/dev-tips/21-highlight-paused-statement/">21. highlight paused statement</a>) that when you navigate through the call stack, the exact column is highlighted.</p>
 
 <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/debugger-shortcuts.gif"/></spoiler>
 <anchor>24</anchor><h2>24. DevTools: Show the function definition of a registered event listener on any node (https://umaar.com/dev-tips/24-view-event-listeners/)</h2>
 <p>Navigate to the Event Listeners pane and browse the events registered on any node. You can also view the source of an event listener by selecting Show Function Definition in the context menu.</p>
 
-<anchor>24</anchor><h2>24. </h2>
-<p>Navigate to the Event Listeners pane and browse the events registered on any node. You can also view the source of an event listener by selecting Show Function Definition in the context menu.</p>
+<anchor>24</anchor><h2>24. Просмотр определения функции, зарегистрированной как обработчик события на DOM-элементе</h2>
+<p>Переключитесь на панель "Event Listeners" при выборе DOM-узла, и вы сможете увидеть все зарегистрированные на нем обработчики событий. Также вы можете посмотреть определение любого обработчика, выбрав пункт "Show Function Definition" в его контекстном меню.</p>
 
 <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/view-event-listeners.gif"/></spoiler>
 <anchor>25</anchor><h2>25. DevTools: Get notified of JS errors while you type (https://umaar.com/dev-tips/25-inline-js-errors/)</h2>
 <p>If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up. <em>Live-edits</em> you make are also checked for an errors in <em>real time</em>.</p>
 
-<anchor>25</anchor><h2>25. </h2>
-<p>If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up. <em>Live-edits</em> you make are also checked for an errors in <em>real time</em>.</p>
+<anchor>25</anchor><h2>25. Нотификация о JS-ошибке во время написания кода</h2>
+<p>Если вы получили ошибку в консоли, кликните на нее, чтобы переместиться к вызвавшему сбой коду в панели "Sources" (рядом с ним вы увидите иконку и текст ошибки). Если начать его редактировать, то код будет исполнен заново в реальном времени.</p>
 
 <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/inline-js-errors.gif"/></spoiler>
 <anchor>26</anchor><h2>26. DevTools: Some appearance preferences are now persisted through to incognito windows (https://umaar.com/dev-tips/26-incognito-preference-persist/)</h2>
@@ -147,11 +146,13 @@
 <p>More information: <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">https://code.google.com/p/chromium/issues/detail?id=376788#c58</a></p>
 <p><em>Now in Chrome Canary</em></p>
 
-<anchor>26</anchor><h2>26. </h2>
-<p>It&apos;s worth going incognito when debugging (nice clean slate, no extensions).</p>
-<p>DevTools will now persist your appearance preferences (docking position, size, pane layout, etc) and devtools settings (disable cache, etc) into the incognito window.</p>
-<p>More information: <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">https://code.google.com/p/chromium/issues/detail?id=376788#c58</a></p>
-<p><em>Now in Chrome Canary</em></p>
+<anchor>26</anchor><h2>26. Персистентность настроек отображения для режима "Инкогнито"</h2>
+<p>Иногда работать в режиме "Инкогнито" гораздо удобнее, потому что он не хранит ваших данных, и там по умолчанию не установлены браузерные расширения.</p>
+<p>Теперь DevTools запоминает настройки отображения панелей (режим, размеры и т.д.) и настройки самого инструмента (отключение кеша и т.д.) и будет их использовать при открытии DevTools в режиме "Инкогнито".</p>
+<p>Если интересны подробности, их можно прочитать <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">здесь</a>.</p>
+<p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
+
+<p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
 
 <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/incognito-preference-persist.gif"/></spoiler>
 <anchor>27</anchor><h2>27. DevTools: Select an easing to get a visual animated preview for how it behaves (https://umaar.com/dev-tips/27-easing-preview/)</h2>
