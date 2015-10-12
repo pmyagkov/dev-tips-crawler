@@ -129,7 +129,10 @@ function formatOutput(postsArray) {
   posts.forEach(function (post) {
     output += _.template('<anchor>${number}</anchor>\
 <h2>${number}. ${title} (${link})</h2>\n')(post);
-    output += post.text + '\n';
+    output += post.text + '\n\n';
+    output += _.template('<anchor>${number}</anchor>\
+<h2>${number}. </h2>\n')(post);
+    output += post.text + '\n\n';
     output += _.template('<spoiler title="Посмотреть скринкаст">\
 <img src="${img}"/>\
 </spoiler>\n')(post);

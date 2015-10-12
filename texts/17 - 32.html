@@ -1,0 +1,248 @@
+Бла Бла Бла
+
+<strong>Содержание</strong>:
+<ol start="17">
+<li><a href="#17">DevTools: Quick-edit the HTML Element tag</a></li>
+<li><a href="#18">DevTools: Alt + Click to expand all child nodes</a></li>
+<li><a href="#19">DevTools: Toggle the DevTools dock state with a keyboard shortcut</a></li>
+<li><a href="#20">DevTools: Reveal DOM nodes in the Elements panel from the Console</a></li>
+<li><a href="#21">DevTools: See the exact statement which executed with granular highlighting</a></li>
+<li><a href="#22">DevTools: Some UI and feature enhancements to the Colour Picker tool</a></li>
+<li><a href="#23">DevTools: Set a breakpoint and navigate through the call stack with keyboard shortcuts</a></li>
+<li><a href="#24">DevTools: Show the function definition of a registered event listener on any node</a></li>
+<li><a href="#25">DevTools: Get notified of JS errors while you type</a></li>
+<li><a href="#26">DevTools: Some appearance preferences are now persisted through to incognito windows</a></li>
+<li><a href="#27">DevTools: Select an easing to get a visual animated preview for how it behaves</a></li>
+<li><a href="#28">DevTools: View and change your DOM breakpoints with the breakpoints pane</a></li>
+<li><a href="#29">DevTools: 5 tricks to use in the Console Panel</a></li>
+<li><a href="#30">DevTools: Console Panel autocomplete with properties (bracket or dot notation)</a></li>
+<li><a href="#31">DevTools: Get and debug event listeners</a></li>
+<li><a href="#32">DevTools: Automatically pause on any exception</a></li>
+</ol>
+<ol start="17">
+    <li><a href="#17">Быстрое редактирование названия HTML-тег в панели "Elements"</a></li>
+    <li><a href="#18">Разворачивание всех дочерних узлов выбранного элемента</a></li>
+    <li><a href="#19">Переключение состояния вкладки DevTools при помощи горячих клавиш</a></li>
+    <li><a href="#20">Переключение на DOM-элемент из DevTools консоли</a></li>
+    <li><a href="#21">Подсветка выполняемого выражения</a></li>
+    <li><a href="#22">Улучшения в работе инструмента Color Picker</a></li>
+    <li><a href="#23">Включение точки останова и навигация по стеку вызовов при помощи горячих клавиш</a></li>
+    <li><a href="#24">Просмотр определения функции, зарегистрированной как обработчик события на DOM-элементе</a></li>
+    <li><a href="#25">Нотификация о JS-ошибке во время написания кода</a></li>
+    <li><a href="#26">Персистентность настроек отображения для режима "Инкогнито"</a></li>
+    <li><a href="#27">Визуализация выбранного режима сглаживания анимации</a></li>
+    <li><a href="#28">Просмотр и изменения точек останова DOM-дерева при помощи панели "Breakpoints"</a></li>
+    <li><a href="#29">5 интересных возможности панели "Console"</a></li>
+    <li><a href="#30">Автодополнение свойств и методов объекта в панели "Console"</a></li>
+    <li><a href="#31">Просмотр и отладка обработчиков событий</a></li>
+    <li><a href="#32">Автоматическая остановка выполнения программы при возникновении любых исключений</a></li>
+</ol>
+<cut />
+<anchor>17</anchor><h2>17. DevTools: Quick-edit the HTML Element tag (https://umaar.com/dev-tips/17-quick-edit-element/)</h2>
+<p>You can double click on the opening tag name of a node in the Elements Panel to edit it. When you do, the closing tag is automatically updated with your change.&#xFEFF;</p>
+
+<anchor>17</anchor><h2>17. Быстрое редактирование названия HTML-тэга в панели "Elements"</h2>
+<p>Если вам нужно поменять название DOM-узла в панели "Elements", дважды кликните на его открывающий тег и введите новое имя. При этом закрывающий тег элемента автоматически будет соответствующе изменен.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/quick-edit-element.gif"/></spoiler>
+<anchor>18</anchor><h2>18. DevTools: Alt + Click to expand all child nodes</h2>
+<p>You can use <em>Alt + Click</em> in the Elements Panel to expand all child nodes. Just click on the small arrow to the left of the DOM node while holding Alt.</p>
+
+<anchor>18</anchor><h2>18. Разворачивание всех дочерних узлов выбранного элемента</h2>
+<p>Вы можете развернуть все вложенные узлы выбранного элемента, удерживая клавишу <strong>Alt</strong> и кликнув по стрелке рядом с открывающим тегом элемента.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/alt-click-expand-node.gif"/></spoiler>
+<anchor>19</anchor><h2>19. DevTools: Toggle the DevTools dock state with a keyboard shortcut (https://umaar.com/dev-tips/19-dock-undock-shortcut/)</h2>
+<p>Use <em>Cmd + Shift + D</em> to toggle the DevTools dock state between the last two recently used states. Dock options are:</p>
+<ul>
+<li>Dock to right</li>
+<li>Dock to bottom</li>
+<li>Undock DevTools</li>
+</ul>
+
+<anchor>19</anchor><h2>19. Переключение состояния вкладки DevTools при помощи горячих клавиш</h2>
+<p>Переключайте два последних используемых режима отображения панели DevTools при помощи <strong>Cmd + Shift + D</strong>. Панель поддерживает следующие опции показа:</p>
+<ul>
+<li>Прикреплена к правому краю окна браузера</li>
+<li>Прикреплена к нижнему краю окна браузера</li>
+<li>Отображается в отдельном окне</li>
+</ul>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/dock-undock-shortcut.gif"/></spoiler>
+<anchor>20</anchor><h2>20. DevTools: Reveal DOM nodes in the Elements panel from the Console (https://umaar.com/dev-tips/20-reveal-in-elements/)</h2>
+<p>If you <code>console.log</code> out a DOM node, you can right click on it in the Console panel and select <em>Reveal in Elements panel</em>, you are then taken to the DOM node location in the Elements panel.&#xFEFF;</p>
+
+<anchor>20</anchor><h2>20. Переключение на DOM-элемент из DevTools консоли</h2>
+<p>Если в консоль выведен DOM-элемент (например, это можно сделать при помощи метода <code>console.log</code>), то вы можете переключиться на его представление в панели "Elements", выбрав "Reveal in Elements panel" в контекстном меню выведенного узла.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/reveal-in-elements.gif"/></spoiler>
+<anchor>21</anchor><h2>21. DevTools: See the exact statement which executed with granular highlighting (https://umaar.com/dev-tips/21-highlight-paused-statement/)</h2>
+<p>When the debugger is paused, you can now see the exact portion of code which executes. It&apos;s highlighted in a <span class="dt-21-debugger"><span class="dt-21-debugger-darker">darker</span> shade of blue</span>. This can also be useful when debugging minified code.</p>
+<p><em>Currently in Chrome Canary</em></p>
+
+<anchor>21</anchor><h2>21. Подсветка выполняемого выражения</h2>
+<p>Когда исполнение кода остановлено, вы можете увидеть конкретное выражение, выполняемое в текущий момент. Оно подсвечивается темно-голубым цветом. Это также может быть полезно при отладке минифицированного кода.</p>
+<p><strong>Функциональность на данный момент доступна в Chrome Canary.</strong></p>
+
+<p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/highlight-paused-statement.gif"/></spoiler>
+<anchor>22</anchor><h2>22. DevTools: Some UI and feature enhancements to the Colour Picker tool (https://umaar.com/dev-tips/22-colour-picker-upgrade/)</h2>
+<p>The colour picker tool in DevTools is getting an upgrade.</p>
+<ul>
+<li>There&apos;s an eye dropper feature.</li>
+<li>Simple interface to pick your colour including alpha.</li>
+<li>Colour format switcher (hex, rgba, hsla).</li>
+</ul>
+<p><em>Currently in Chrome Canary</em></p>
+
+<anchor>22</anchor><h2>22. Улучшения в работе инструмента Color Picker</h2>
+<p>Команда разработки DevTools улучшила инструмент выбора цвета:</p>
+<ul>
+<li>Добавилась функциональность захвата цвета с веб-страницы (пипетка).</li>
+<li>Упростился интерфейс, позволяющий вам подобрать цвет из палитры, включая альфа-канал.</li>
+<li>Появилось переключение формата отображения цвета (hex, rgba, hsla).</li>
+</ul>
+<p><strong>Функциональность на данный момент доступна в Chrome Canary.</strong></p>
+
+<p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/colour-picker-upgrade.gif"/></spoiler>
+<anchor>23</anchor><h2>23. DevTools: Set a breakpoint and navigate through the call stack with keyboard shortcuts (https://umaar.com/dev-tips/23-debugger-shortcuts/)</h2>
+<p>There are a few keyboard shortcuts when dealing with the debugger. A few are:</p>
+<ul>
+<li>Toggle a breakpoint while on a line: Cmd + B</li>
+<li>Select the next call frame: Ctrl + .</li>
+<li>Select the previous call frame: Ctrl + ,</li>
+</ul>
+<p>Also, you may notice from a few Dev Tips ago (<a href="https://umaar.com/dev-tips/21-highlight-paused-statement/">21. highlight paused statement</a>) that when you navigate through the call stack, the exact column is highlighted.</p>
+
+<anchor>23</anchor><h2>23. </h2>
+<p>There are a few keyboard shortcuts when dealing with the debugger. A few are:</p>
+<ul>
+<li>Toggle a breakpoint while on a line: Cmd + B</li>
+<li>Select the next call frame: Ctrl + .</li>
+<li>Select the previous call frame: Ctrl + ,</li>
+</ul>
+<p>Also, you may notice from a few Dev Tips ago (<a href="https://umaar.com/dev-tips/21-highlight-paused-statement/">21. highlight paused statement</a>) that when you navigate through the call stack, the exact column is highlighted.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/debugger-shortcuts.gif"/></spoiler>
+<anchor>24</anchor><h2>24. DevTools: Show the function definition of a registered event listener on any node (https://umaar.com/dev-tips/24-view-event-listeners/)</h2>
+<p>Navigate to the Event Listeners pane and browse the events registered on any node. You can also view the source of an event listener by selecting Show Function Definition in the context menu.</p>
+
+<anchor>24</anchor><h2>24. </h2>
+<p>Navigate to the Event Listeners pane and browse the events registered on any node. You can also view the source of an event listener by selecting Show Function Definition in the context menu.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/view-event-listeners.gif"/></spoiler>
+<anchor>25</anchor><h2>25. DevTools: Get notified of JS errors while you type (https://umaar.com/dev-tips/25-inline-js-errors/)</h2>
+<p>If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up. <em>Live-edits</em> you make are also checked for an errors in <em>real time</em>.</p>
+
+<anchor>25</anchor><h2>25. </h2>
+<p>If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up. <em>Live-edits</em> you make are also checked for an errors in <em>real time</em>.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/inline-js-errors.gif"/></spoiler>
+<anchor>26</anchor><h2>26. DevTools: Some appearance preferences are now persisted through to incognito windows (https://umaar.com/dev-tips/26-incognito-preference-persist/)</h2>
+<p>It&apos;s worth going incognito when debugging (nice clean slate, no extensions).</p>
+<p>DevTools will now persist your appearance preferences (docking position, size, pane layout, etc) and devtools settings (disable cache, etc) into the incognito window.</p>
+<p>More information: <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">https://code.google.com/p/chromium/issues/detail?id=376788#c58</a></p>
+<p><em>Now in Chrome Canary</em></p>
+
+<anchor>26</anchor><h2>26. </h2>
+<p>It&apos;s worth going incognito when debugging (nice clean slate, no extensions).</p>
+<p>DevTools will now persist your appearance preferences (docking position, size, pane layout, etc) and devtools settings (disable cache, etc) into the incognito window.</p>
+<p>More information: <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">https://code.google.com/p/chromium/issues/detail?id=376788#c58</a></p>
+<p><em>Now in Chrome Canary</em></p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/incognito-preference-persist.gif"/></spoiler>
+<anchor>27</anchor><h2>27. DevTools: Select an easing to get a visual animated preview for how it behaves (https://umaar.com/dev-tips/27-easing-preview/)</h2>
+<p>If you view a property value containing an easing (e.g. the <em>&apos;ease-in&apos;</em> in <code>transition: color .5s ease-in;</code>) - click the easing icon to see a preview on what it looks like. You can also select other easings to preview and/or set them as the new easing for the inspected element.</p>
+<p><em>Now in Chrome Canary</em></p>
+
+<anchor>27</anchor><h2>27. </h2>
+<p>If you view a property value containing an easing (e.g. the <em>&apos;ease-in&apos;</em> in <code>transition: color .5s ease-in;</code>) - click the easing icon to see a preview on what it looks like. You can also select other easings to preview and/or set them as the new easing for the inspected element.</p>
+<p><em>Now in Chrome Canary</em></p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/easing-preview.gif"/></spoiler>
+<anchor>28</anchor><h2>28. DevTools: View and change your DOM breakpoints with the breakpoints pane (https://umaar.com/dev-tips/28-dom-breakpoint-pane/)</h2>
+<p>Use the DOM Breakpoints Pane to <em>enable</em>, <em>disable</em> or <em>remove</em> existing breakpoints  which you have set.&#xFEFF;</p>
+
+<anchor>28</anchor><h2>28. </h2>
+<p>Use the DOM Breakpoints Pane to <em>enable</em>, <em>disable</em> or <em>remove</em> existing breakpoints  which you have set.&#xFEFF;</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/dom-breakpoint-pane.gif"/></spoiler>
+<anchor>29</anchor><h2>29. DevTools: 5 tricks to use in the Console Panel (https://umaar.com/dev-tips/29-five-console-tricks/)</h2>
+<h4 id="use-the-inspect-command-to-jump-straight-to-a-passed-in-dom-node">Use the inspect() command to jump straight to a passed in DOM node</h4>
+<pre><code>inspect($(&apos;p&apos;))
+</code></pre>
+<h4 id="the-copy-command-to-copy-text-to-your-clipboard">The copy() command to copy text to your clipboard</h4>
+<pre><code>copy(Object.keys(window))
+
+// stores [&quot;top&quot;, &quot;window&quot;, &quot;location&quot;, &quot;external&quot;... and so on
+</code></pre>
+<h4 id="styled-console-output-">Styled console output:</h4>
+<pre><code>console.log(&apos;%cHello world&apos;, &apos;font-size:40px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);&apos;);
+</code></pre>
+<h4 id="get-the-values-of-an-object">Get the values of an object</h4>
+<pre><code>values({
+    one: 1,
+    two: 2,
+    three: 3
+})
+
+// logs [1, 2, 3]
+</code></pre>
+<h4 id="clear-the-console">Clear the console</h4>
+<pre><code>Cmd + K (Ctrl + L on Windows)
+</code></pre>
+
+<anchor>29</anchor><h2>29. </h2>
+<h4 id="use-the-inspect-command-to-jump-straight-to-a-passed-in-dom-node">Use the inspect() command to jump straight to a passed in DOM node</h4>
+<pre><code>inspect($(&apos;p&apos;))
+</code></pre>
+<h4 id="the-copy-command-to-copy-text-to-your-clipboard">The copy() command to copy text to your clipboard</h4>
+<pre><code>copy(Object.keys(window))
+
+// stores [&quot;top&quot;, &quot;window&quot;, &quot;location&quot;, &quot;external&quot;... and so on
+</code></pre>
+<h4 id="styled-console-output-">Styled console output:</h4>
+<pre><code>console.log(&apos;%cHello world&apos;, &apos;font-size:40px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);&apos;);
+</code></pre>
+<h4 id="get-the-values-of-an-object">Get the values of an object</h4>
+<pre><code>values({
+    one: 1,
+    two: 2,
+    three: 3
+})
+
+// logs [1, 2, 3]
+</code></pre>
+<h4 id="clear-the-console">Clear the console</h4>
+<pre><code>Cmd + K (Ctrl + L on Windows)
+</code></pre>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/five-console-tricks.gif"/></spoiler>
+<anchor>30</anchor><h2>30. DevTools: Console Panel autocomplete with properties (bracket or dot notation) (https://umaar.com/dev-tips/30-console-autocomplete/)</h2>
+<p>Autocomplete in the Console Panel not only works with regular dot notation (e.g. <code>window.onloa</code> &#x2192; <code>window.onload</code>), but also with square bracket notation e.g. <code>window[&apos;onloa</code> &#x2192; <code>window[&apos;onload&apos;]</code>.</p>
+<p>Even if you have an array, you get autocomplete for the index e.g. <code>arr[0</code> &#x2192; <code>arr[0]</code>.</p>
+
+<anchor>30</anchor><h2>30. </h2>
+<p>Autocomplete in the Console Panel not only works with regular dot notation (e.g. <code>window.onloa</code> &#x2192; <code>window.onload</code>), but also with square bracket notation e.g. <code>window[&apos;onloa</code> &#x2192; <code>window[&apos;onload&apos;]</code>.</p>
+<p>Even if you have an array, you get autocomplete for the index e.g. <code>arr[0</code> &#x2192; <code>arr[0]</code>.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/console-autocomplete.gif"/></spoiler>
+<anchor>31</anchor><h2>31. DevTools: Get and debug event listeners (https://umaar.com/dev-tips/31-get-debug-event-listeners/)</h2>
+<p>You can use <code>getEventListeners(node)</code> in the Console Panel to retrieve registered event listeners on the passed in DOM node. In addition to that, the video clip shows <code>debug(fn)</code> invoking the debugger when <code>fn</code> is called.</p>
+
+<anchor>31</anchor><h2>31. </h2>
+<p>You can use <code>getEventListeners(node)</code> in the Console Panel to retrieve registered event listeners on the passed in DOM node. In addition to that, the video clip shows <code>debug(fn)</code> invoking the debugger when <code>fn</code> is called.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/get-debug-event-listeners.gif"/></spoiler>
+<anchor>32</anchor><h2>32. DevTools: Automatically pause on any exception (https://umaar.com/dev-tips/32-pause-on-exception/)</h2>
+<p>In DevTools, you can automatically pause on any exception (especially useful for <em>uncaught</em> exceptions). Just enable &apos;Pause on exceptions&apos; within the Sources Panel. Optionally, you can also pause on <em>caught</em> exceptions.</p>
+<p>This means the debugger will pause <em>before</em> that red message appears in the Console and you get a chance to inspect what may have gone wrong.</p>
+
+<anchor>32</anchor><h2>32. </h2>
+<p>In DevTools, you can automatically pause on any exception (especially useful for <em>uncaught</em> exceptions). Just enable &apos;Pause on exceptions&apos; within the Sources Panel. Optionally, you can also pause on <em>caught</em> exceptions.</p>
+<p>This means the debugger will pause <em>before</em> that red message appears in the Console and you get a chance to inspect what may have gone wrong.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/pause-on-exception.gif"/></spoiler>
