@@ -7,5 +7,12 @@
     "test": "test"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "lodash": "^3.10.1",
+    "minimist": "^1.2.0",
+    "request": "^2.65.0",
+    "vow": "^0.4.11"
+  }
 }
