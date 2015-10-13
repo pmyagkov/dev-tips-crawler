@@ -26,7 +26,7 @@
         <li><a href="#32">DevTools: Automatically pause on any exception</a></li>
     </ol>
     <ol start="17">
-        <li><a href="#17">Быстрое редактирование названия HTML-тег в панели "Elements"</a></li>
+        <li><a href="#17">Быстрое редактирование названия HTML-тега в панели "Elements"</a></li>
         <li><a href="#18">Разворачивание всех дочерних узлов выбранного элемента</a></li>
         <li><a href="#19">Переключение состояния вкладки DevTools при помощи горячих клавиш</a></li>
         <li><a href="#20">Переключение на DOM-элемент из DevTools консоли</a></li>
@@ -38,7 +38,7 @@
         <li><a href="#26">Персистентность настроек отображения для режима "Инкогнито"</a></li>
         <li><a href="#27">Визуализация выбранного режима сглаживания анимации</a></li>
         <li><a href="#28">Просмотр и изменения точек останова DOM-дерева при помощи панели "Breakpoints"</a></li>
-        <li><a href="#29">5 интересных возможности панели "Console"</a></li>
+        <li><a href="#29">Пять интересных возможности панели "Console"</a></li>
         <li><a href="#30">Автодополнение свойств и методов объекта в панели "Console"</a></li>
         <li><a href="#31">Просмотр и отладка обработчиков событий</a></li>
         <li><a href="#32">Автоматическая остановка выполнения программы при возникновении любых исключений</a></li>
@@ -48,14 +48,14 @@
     <p>You can double click on the opening tag name of a node in the Elements Panel to edit it. When you do, the closing tag is automatically updated with your change.&#xFEFF;</p>
 
     <anchor>17</anchor><h2>17. Быстрое редактирование названия HTML-тега в панели "Elements"</h2>
-    <p>Если вам нужно поменять название DOM-узла в панели "Elements", дважды кликните на его открывающий тег и введите новое имя. При этом закрывающий тег элемента автоматически будет соответствующе изменен.</p>
+    <p>Если вам нужно поменять название DOM-узла в панели "Elements", дважды кликните на его открывающий тег и введите новое имя. Закрывающий тег этого элемента будет изменен автоматически.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/quick-edit-element.gif"/></spoiler>
     <anchor>18</anchor><h2>18. DevTools: Alt + Click to expand all child nodes</h2>
     <p>You can use <em>Alt + Click</em> in the Elements Panel to expand all child nodes. Just click on the small arrow to the left of the DOM node while holding Alt.</p>
 
     <anchor>18</anchor><h2>18. Разворачивание всех дочерних узлов выбранного элемента</h2>
-    <p>Вы можете развернуть все вложенные узлы выбранного элемента, удерживая клавишу <strong>Alt</strong> и кликнув по стрелке рядом с открывающим тегом элемента.</p>
+    <p>Вы можете развернуть все вложенные узлы выбранного элемента, зажав клавишу <strong>Alt</strong> и кликнув по стрелке рядом с его открывающим тегом.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/alt-click-expand-node.gif"/></spoiler>
     <anchor>19</anchor><h2>19. DevTools: Toggle the DevTools dock state with a keyboard shortcut (https://umaar.com/dev-tips/19-dock-undock-shortcut/)</h2>
@@ -67,7 +67,7 @@
     </ul>
 
     <anchor>19</anchor><h2>19. Переключение состояния вкладки DevTools при помощи горячих клавиш</h2>
-    <p>Переключайте два последних используемых режима отображения панели DevTools при помощи <strong>Cmd + Shift + D</strong>. Панель поддерживает следующие опции показа:</p>
+    <p>Переключайте два последних используемых режима отображения панели DevTools при помощи сочетания клавиш <strong>Cmd + Shift + D</strong>. Панель поддерживает следующие опции показа:</p>
     <ul>
         <li>Прикреплена к правому краю окна браузера</li>
         <li>Прикреплена к нижнему краю окна браузера</li>
@@ -87,10 +87,7 @@
     <p><em>Currently in Chrome Canary</em></p>
 
     <anchor>21</anchor><h2>21. Подсветка выполняемого выражения</h2>
-    <p>Когда исполнение кода остановлено, вы можете увидеть конкретное выражение, выполняемое в текущий момент. Оно подсвечивается темно-голубым цветом. Это также может быть полезно при отладке минифицированного кода.</p>
-    <p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
-
-    <p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
+    <p>Вы можете увидеть конкретное выражение, на котором было остановлено выполнение кода: оно подсвечивается темно-голубым цветом. Это может быть полезно также при отладке минифицированного кода.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/highlight-paused-statement.gif"/></spoiler>
     <anchor>22</anchor><h2>22. DevTools: Some UI and feature enhancements to the Colour Picker tool (https://umaar.com/dev-tips/22-colour-picker-upgrade/)</h2>
@@ -105,13 +102,10 @@
     <anchor>22</anchor><h2>22. Улучшения в работе инструмента Color Picker</h2>
     <p>Команда разработки DevTools улучшила инструмент выбора цвета:</p>
     <ul>
-        <li>Добавилась функциональность захвата цвета с веб-страницы (пипетка).</li>
-        <li>Упростился интерфейс, позволяющий вам подобрать цвет из палитры, включая альфа-канал.</li>
+        <li>Добавлен функционал захвата цвета с веб-страницы ("пипетка").</li>
+        <li>Упростился интерфейс, позволяющий вам подобрать цвет из палитры (включая альфа-канал).</li>
         <li>Появилось переключение формата отображения цвета (hex, rgba, hsla).</li>
     </ul>
-    <p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
-
-    <p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/colour-picker-upgrade.gif"/></spoiler>
     <anchor>23</anchor><h2>23. DevTools: Set a breakpoint and navigate through the call stack with keyboard shortcuts (https://umaar.com/dev-tips/23-debugger-shortcuts/)</h2>
@@ -126,7 +120,7 @@
     <anchor>23</anchor><h2>23. Включение точки останова и навигация по стеку вызовов при помощи горячих клавиш</h2>
     <p>При работе с отладчиком вам помогут несколько клавиатурных сокращений:</p>
     <ul>
-        <li>Включение/выключение точки останова на строке js-файла: <strong>Cmd + B</strong></li>
+        <li>Включение/выключение точки останова на текущей строке js-файла: <strong>Cmd + B</strong></li>
         <li>Выбор следующего фрейма в стеке вызовов: <strong>Ctrl + .</strong></li>
         <li>Выбор предыдущего фрейма в стеке вызовов: <strong>Ctrl + ,</strong></li>
     </ul>
@@ -136,14 +130,14 @@
     <p>Navigate to the Event Listeners pane and browse the events registered on any node. You can also view the source of an event listener by selecting Show Function Definition in the context menu.</p>
 
     <anchor>24</anchor><h2>24. Просмотр определения функции, зарегистрированной как обработчик события на DOM-элементе</h2>
-    <p>Переключитесь на панель "Event Listeners" при выборе DOM-узла, и вы сможете увидеть все зарегистрированные на нем обработчики событий. Также вы можете посмотреть определение любого обработчика, выбрав пункт "Show Function Definition" в его контекстном меню.</p>
+    <p>Переключитесь на панель "Event Listeners" при выборе DOM-узла, и вы сможете увидеть все зарегистрированные на нем обработчики событий. Также можно посмотреть определение любого обработчика, выбрав пункт "Show Function Definition" в его контекстном меню.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/view-event-listeners.gif"/></spoiler>
     <anchor>25</anchor><h2>25. DevTools: Get notified of JS errors while you type (https://umaar.com/dev-tips/25-inline-js-errors/)</h2>
     <p>If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up. <em>Live-edits</em> you make are also checked for an errors in <em>real time</em>.</p>
 
     <anchor>25</anchor><h2>25. Нотификация о JS-ошибке во время написания кода</h2>
-    <p>Если вы получили ошибку в консоли, кликните на нее, чтобы переместиться к вызвавшему сбой коду в панели "Sources" (рядом с ним вы увидите иконку и текст ошибки). Если начать его редактировать, то код будет исполнен заново в реальном времени.</p>
+    <p>Если вы получили ошибку в консоли, кликните на нее, чтобы переместиться к вызвавшему сбой коду в панели "Sources" (рядом с ним вы увидите иконку и текст ошибки). Если начать редактировать код, то он будет исполнен заново в реальном времени.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/inline-js-errors.gif"/></spoiler>
     <anchor>26</anchor><h2>26. DevTools: Some appearance preferences are now persisted through to incognito windows (https://umaar.com/dev-tips/26-incognito-preference-persist/)</h2>
@@ -153,12 +147,9 @@
     <p><em>Now in Chrome Canary</em></p>
 
     <anchor>26</anchor><h2>26. Персистентность настроек отображения для режима "Инкогнито"</h2>
-    <p>Иногда работать в режиме "Инкогнито" гораздо удобнее, потому что он не хранит ваших данных, и там по умолчанию не установлены браузерные расширения.</p>
-    <p>Теперь DevTools запоминает настройки отображения панелей (режим, размеры и т.д.) и настройки самого инструмента (отключение кеша и т.д.) и будет их использовать при открытии DevTools в режиме "Инкогнито".</p>
+    <p>Иногда гораздо удобнее заниматься отладкой в режиме "Инкогнито", потому что он не хранит ваших данных, и там по умолчанию не установлены браузерные расширения.</p>
+    <p>Теперь DevTools запоминает настройки отображения панелей (режим, размеры и т.д.) и настройки самого инструмента (отключение кеша и т.д.) и будет использовать их при открытии DevTools в режиме "Инкогнито".</p>
     <p>Если интересны подробности, их можно прочитать <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">здесь</a>.</p>
-    <p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
-
-    <p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/incognito-preference-persist.gif"/></spoiler>
     <anchor>27</anchor><h2>27. DevTools: Select an easing to get a visual animated preview for how it behaves (https://umaar.com/dev-tips/27-easing-preview/)</h2>
@@ -166,17 +157,14 @@
     <p><em>Now in Chrome Canary</em></p>
 
     <anchor>27</anchor><h2>27. Визуализация выбранного режима сглаживания анимации</h2>
-    <p>Если вы видите свойство, содержащее сглаживание (например, <em>ease-in</em> в свойстве <code>transition: color .5s ease-in;</code>), то кликните на иконку сглаживания, чтобы посмотреть, на что оно похоже. Вы также можете попробовать другие функции сглаживания и применить подходящую в текущему элементу.</p>
-    <p><strong>Функциональность на данный момент доступна только в Chrome Canary.</strong></p>
-
-    <p><strong>Прим. перев.</strong>:</p> <i>На данный момент функциональность добавлена и в стандартную версию Google Chrome.</i>
+    <p>Если вы видите свойство, содержащее сглаживание (например, <em>ease-in</em> в свойстве <code>transition: color .5s ease-in;</code>), то для того, чтобы посмотреть, на что оно похоже, кликните на иконку сглаживания. Вы также сможете попробовать другие функции сглаживания и применить подходящую в текущему элементу.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/easing-preview.gif"/></spoiler>
     <anchor>28</anchor><h2>28. DevTools: View and change your DOM breakpoints with the breakpoints pane (https://umaar.com/dev-tips/28-dom-breakpoint-pane/)</h2>
     <p>Use the DOM Breakpoints Pane to <em>enable</em>, <em>disable</em> or <em>remove</em> existing breakpoints  which you have set.&#xFEFF;</p>
 
     <anchor>28</anchor><h2>28. Просмотр и изменения точек останова DOM-дерева при помощи панели "Breakpoints"</h2>
-    <p>Используйте панель точек останова DOM-дерева, чтобы включить, выключить или удалить брейкпоинты, которые вы уже поставили.</p>
+    <p>Используйте панель точек останова DOM-дерева ("Breakpoints"), чтобы включить, выключить или удалить брейкпоинты, которые вы уже поставили.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/dom-breakpoint-pane.gif"/></spoiler>
     <anchor>29</anchor><h2>29. DevTools: 5 tricks to use in the Console Panel (https://umaar.com/dev-tips/29-five-console-tricks/)</h2>
@@ -204,7 +192,7 @@
 <pre><code>Cmd + K (Ctrl + L on Windows)
 </code></pre>
 
-    <anchor>29</anchor><h2>29. 5 интересных возможности панели "Console"</h2>
+    <anchor>29</anchor><h2>29. Пять интересных возможности панели "Console"</h2>
     <ol>
         <li>Выбирайте конкретный DOM-узел в панели "Elements", передав его в функцию <code>inspect(node)</code>;</li>
         <li>
@@ -242,7 +230,7 @@
 
     <anchor>30</anchor><h2>30. Автодополнение свойств и методов объекта в панели "Console"</h2>
     <p>Автодополнение в консоли работает не только при использовании точки (<code>window.onlo</code> → <code>window.onload</code>), но и при использовании квадратных скобок (<code>window['onloa</code> → <code>window['onload']</code>).</p>
-    <p>Также вы увидите его и при отладке массивов (<code>arr[0</code> → <code>arr[0]</code>).</p>
+    <p>Также вы можете использовать его при отладке массивов (<code>arr[0</code> → <code>arr[0]</code>).</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/console-autocomplete.gif"/></spoiler>
     <anchor>31</anchor><h2>31. DevTools: Get and debug event listeners (https://umaar.com/dev-tips/31-get-debug-event-listeners/)</h2>
@@ -257,7 +245,7 @@
     <p>This means the debugger will pause <em>before</em> that red message appears in the Console and you get a chance to inspect what may have gone wrong.</p>
 
     <anchor>32</anchor><h2>32. Автоматическая остановка выполнения программы при возникновении любых исключений</h2>
-    <p>Вы можете останавить поток исполнения при возникновении любого исключения (это особенно полезно в случае <strong>непойманных</strong> исключений). Для этого включите опцию "Pause on exceptions" в панели "Sources". Кроме этого вы можете поймать все обработанные исключения, установив галочку "Pause on caught exceptions".
+    <p>Вы можете остановить поток исполнения при возникновении исключения, которое не обрабатывается вашим кодом. Для этого включите опцию "Pause on exceptions" в панели "Sources". Кроме этого вы можете поймать все обработанные исключения, установив галочку "Pause on caught exceptions".
     <p>При использовании этой функциональности у вас появится возможность выявить проблему в коде до фактического возникновения ошибки.</p>
 
     <spoiler title="Посмотреть скринкаст"><img src="/assets/images/dev-tips/pause-on-exception.gif"/></spoiler>
