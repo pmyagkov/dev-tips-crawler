@@ -5,6 +5,8 @@ var _ = require('lodash');
 var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs');
 
+// ./upload_pic.sh 5dsankjct1csbo0r6lp0vlh1j0 /Users/p.myagkov/Downloads/yep_360.jpg
+
 var $;
 
 if (argv['_'].length < 2) {
