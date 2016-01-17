@@ -1,0 +1,306 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+Бла Бла Бла
+
+<strong>Содержание</strong>:
+<ol start="33">
+	<li><a href="#33">DevTools: Expand CSS shorthand properties</a></li>
+	<li><a href="#34">DevTools: See matching selectors based on the color</a></li>
+	<li><a href="#35">DevTools: Visually navigate the network panel and view captured screenshots during page loadWhat would you like to see next in Dev Tips?</a></li>
+	<li><a href="#36">Sublime Text: Fuzzy search with the GOTO feature of Sublime Text</a></li>
+	<li><a href="#37">DevTools: Quickly change CSS values with the keyboard or mousewheel</a></li>
+	<li><a href="#38">DevTools: Scroll elements into the viewport</a></li>
+	<li><a href="#39">Node: Use Babel to run ES6 JavaScript</a></li>
+	<li><a href="#40">DevTools: Quickly view/edit CSS or JavaScript resources from the Elements panel.</a></li>
+	<li><a href="#41">DevTools: Preview JavaScript values inline while debugging</a></li>
+	<li><a href="#42">DevTools: Use Network colour groups to easily identify a resource type</a></li>
+	<li><a href="#43">DevTools: Trigger a pseudo class (like hover) on an element</a></li>
+	<li><a href="#44">DevTools: Perform Inspector inception by inspecting DevTools</a></li>
+	<li><a href="#45">DevTools: Select and execute a block of code in the Sources Panel</a></li>
+	<li><a href="#46">DevTools: Set a breakpoint based on a certain condition</a></li>
+	<li><a href="#47">DevTools: Shortcut to select the next occurrence</a></li>
+	<li><a href="#48">DevTools: Live Edit CSS in Sources and increment values easily</a></li>
+</ol>
+<ol start="33">
+	<li><a href="#33">Разворачивание упрощенной записи CSS-свойств</a></li>
+	<li><a href="#34">Определение совпадения селекторов по цвету</a></li>
+	<li><a href="#35">Использование визуальной навигации и просмотр снятых скриншотов в процессе загрузки страницы</a></li>
+	<li><a href="#36">Sublime Text: нечеткий поиск при помощи функциональности GOTO</a></li>
+	<li><a href="#37">Быстрое изменение значения CSS-свойств при помощи клавиатуры и колеса мыши</a></li>
+	<li><a href="#38">Прокрутка элемента в области видимости</a></li>
+	<li><a href="#39">Node.js: Использование Babel для запуска ES6</a></li>
+	<li><a href="#40">Быстрый просмотр и редактирование CSS или Javascript файлов в панели «Elements»</a></li>
+	<li><a href="#41">Отображение значений Javascript-переменных рядом с кодом в процессе отладки</a></li>
+	<li><a href="#42">Использование цветовых групп панели «Network» для упрощения идентификации типа ресурса</a></li>
+	<li><a href="#43">Активация псевдо классов DOM-элемента</a></li>
+	<li><a href="#44">Инспектирование самих инструментов разработчика</a></li>
+	<li><a href="#45">Запуск выбранного блока кода в панели «Sources»</a></li>
+	<li><a href="#46">Установка условных точек останова</a></li>
+	<li><a href="#47">Переход к следующему вхождению выбранной строки при помощи горячих клавиш</a></li>
+	<li><a href="#48">Редактирование CSS-файла в панели «Sources» и упрощенное изменение значений CSS-свойств</a></li>
+</ol>
+<cut />
+<anchor>33</anchor><h2>33. DevTools: Expand CSS shorthand properties (https://umaar.com/dev-tips/33-expand-shorthand-properties/)</h2>
+<p>In the styles pane, you can expand CSS shorthand properties like <code>flex</code> or <code>padding</code> and see the full range of properties which are defined for you. E.g.</p>
+<pre><code>flex: 0 0 45%;
+</code></pre>
+<p>Translates to:</p>
+<pre><code>flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 45%;
+</code></pre>
+<p>Just click the small arrow near the shorthand property to expand it.</p>
+
+<anchor>33</anchor><h2>33. Разворачивание короткой записи CSS-свойств</h2>
+<p>Разворачивайте укороченную запись CSS-свойств при помощи клика на стрелку рядом со соответствующим свойством в панели «Styles».</p>
+<p>
+	Например, свойство <code>flex: 0 0 45%;</code> превратится в
+	<code>
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 45%;
+	</code>
+</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/f45/222/dab/f45222dab3184318ac012dc69b05a71e.gif"/></spoiler>
+<anchor>34</anchor><h2>34. DevTools: See matching selectors based on the color (https://umaar.com/dev-tips/34-selector-matching/)</h2>
+<p>When you are viewing a selector in the Styles Pane, comma separated selector portions are colored differently depending on whether or not they match the selected DOM node.</p>
+<ul>
+	<li>An unmatched portion is shown in a light grey.</li>
+	<li>A matching selector portion is shown in black.</li>
+</ul>
+
+<anchor>34</anchor><h2>34. Определение совпадения селекторов по цвету</h2>
+<p>Отображающиеся в панели «Styles» части селекторов могут быть окрашены в разные цвета в зависимости от того, совпадает ли селектор выбранного DOM-элемента с ней или нет.
+	Серым цветом отображаются несовпавшие части, а черным — совпавшие.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/04a/166/484/04a166484b5d49d5895e37cb51bf6692.gif"/></spoiler>
+<anchor>35</anchor><h2>35. DevTools: Visually navigate the network panel and view captured screenshots during page load (https://umaar.com/dev-tips/35-network-filmstrip/)</h2>
+<p>The Network Panel is getting some nice upgrades. There&apos;s a film strip at the top which shows page rendering from start to finish.
+	If you click a screenshot you are taken to the corresponding point in the timeline-style view.</p>
+
+
+<anchor>35</anchor><h2>35. Использование визуальной навигации и просмотр снятых скриншотов в процессе загрузки страницы</h2>
+<p>Панель «Network» также получила заметное обновление. Теперь в ней можно увидеть полоску, выполненную в виде кинопленки, кадры из которой являются скриншотами процесса рендеринга страницы.
+	При нажатии на любой кадр, вы переместитесь в соответствующее место панели отображения загрузки ресурсов.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/f7c/bba/702/f7cbba70287d4d2592ebb198faf4ea54.gif"/></spoiler>
+<anchor>36</anchor><h2>36. Sublime Text: Fuzzy search with the GOTO feature of Sublime Text (https://umaar.com/dev-tips/36-sublime-fuzzy-search/)</h2>
+<p>Within Sublime Text, use <em>CMD + P</em> (Ctrl + P on Windows) and start navigating! In a JavaScript file, you can use <code>@fn</code> to find functions named as such, however if you prepend your query with <code>#</code>, you utilise fuzzy search.</p>
+<p>In the example, to find a variable <code>track_to_play</code>, I just search for <code>#ttp</code>.</p>
+
+<anchor>36</anchor><h2>36. Sublime Text: нечеткий поиск при помощи функциональности GOTO</h2>
+<p>Если вы используете Sublime Text, то при помощи шортката <em>CMD + P</em> (Ctrl + P on Windows) вы запустите поиск сущностей в вашем коде.
+	Например, в если набрать в поиске <code>@fn</code> применительно к js-файлу, то вы найдете все такие функции.
+	Также используйте префикс <code>#</code>, запускающий нечеткий поиск.
+<p>Например, чтобы найти переменную <code>track_to_play</code>, вам достаточно написать <code>#ttp</code>.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/252/5cd/b0e/2525cdb0e99949a48435a895d60ee963.gif"/></spoiler>
+<anchor>37</anchor><h2>37. DevTools: Quickly change CSS values with the keyboard or mousewheel (https://umaar.com/dev-tips/37-quick-change-css-values/)</h2>
+<p>Quickly increment and decrement numeric CSS property values:</p>
+<ul>
+	<li>Up / Down to increment or decrement by 1.</li>
+	<li>Shift + Up to increment by 10.</li>
+	<li>Alt + Up to increment by 0.1.</li>
+	<li>You can also use the mousewheel to easily change the values.</li>
+</ul>
+
+<anchor>37</anchor><h2>37. Быстрое изменение значения CSS-свойств при помощи клавиатуры и колеса мыши</h2>
+<p>Чтобы увеличивать или уменьшать числовое значение CSS-свойства, используйте:</p>
+<ul>
+	<li>Стрелки <strong>↑/↓</strong> для изменения значения на 1.</li>
+	<li><strong>Shift + ↑/↓</strong> для изменения значения на 10.</li>
+	<li><strong>Alt + ↑/↓</strong> для изменения значения на 0.1.</li>
+	<li>Вы также можете очень просто изменять значение колесом мыши.</li>
+</ul>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/9d9/883/c5f/9d9883c5f0d74e829ea540cb2eeca37c.gif"/></spoiler>
+<anchor>38</anchor><h2>38. DevTools: Scroll elements into the viewport (https://umaar.com/dev-tips/38-scroll-into-view/)</h2>
+<p>If an element you&apos;re inspecting is out of view, bring it into the viewport:</p>
+<ul>
+	<li>Right click on the DOM node from the elements panel.</li>
+	<li>Select Scroll into view.</li>
+</ul>
+<p>Also, you probably see this all the time but don&apos;t forget, when you hover over a DOM node, a small tooltip appears indicating the dimensions and position of the element in question.</p>
+<p><img class="dt-38-tooltip" src="/assets/images/dev-tips/tooltip-f67ed3f1.png" alt="Tooltip indicating element position"></p>
+
+<anchor>38</anchor><h2>38. Прокрутка элемента в области видимости</h2>
+<p>Когда интересующий вас DOM-элемент находится вне видимых пределов страницы, вы можете вернуть его в область видимости, используя команду «Scroll into view» из контекстного меню необходимого элемента в панели «Elements». </p>
+<p>Также полезно вспомнить, что при наведении на DOM-элемент, на странице появляется небольшой тултип, показывающий размеры и позицию блока.
+</p>
+<p><img class="dt-38-tooltip" src="https://habrastorage.org/files/d13/d74/2a6/d13d742a61fa40afbefd59959af95892.png" alt="Tooltip indicating element position"></p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/617/23d/fb9/61723dfb91104971bfc60fa916173ed7.gif"/></spoiler>
+<anchor>39</anchor><h2>39. Node: Use Babel to run ES6 JavaScript (https://umaar.com/dev-tips/39-node-es6-transpile/)</h2>
+<p>It&apos;s quick to try out ES6 style code in JavaScript. In your terminal:</p>
+<pre><code>npm install -g babel
+</code></pre>
+<p>Create a new file <code>sum.js</code>:</p>
+<pre><code>const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b);
+	console.log( &apos;sum: &apos;, sum([1,2,3]) )
+</code></pre>
+<p>Then run: <code>babel-node sum.js</code></p>
+<p>You can even run <code>babel-node</code> without any arguments and use the REPL to execute JS on the fly. If you introduce it into a project, there are babel packages for Gulp and Grunt.</p>
+
+<anchor>39</anchor><h2>39. Node.js: Использование Babel для запуска ES6</h2>
+<p>Попробовать возможности ES6 в терминале можно следующим образом:</p>
+<ul>
+	<li>
+		Глобально установите npm-пакет babel<br>
+		<code>npm install -g babel</code>
+	</li>
+	<li>
+		Создайте новый файл <code>sum.js</code><br>
+		<code>
+			const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b);
+			console.log( &apos;sum: &apos;, sum([1,2,3]) )
+		</code>
+	</li>
+	<li>
+		Запустите код при помощи:<br>
+		<code>babel-node sum.js</code>
+	</li>
+</ul>
+<p>
+	Вы также можете запускать <code>babel-node</code> без аргументов в режиме REPL (Read-eval-print loop) для запуска Javascript'a налету.
+	Интегрировать эту функциональность в ваш существующий проект можно при помощи пакетов для сборщиков Gulp или Grunt.
+</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/09f/4e9/679/09f4e967932144178f38c4de6179e12d.gif"/></spoiler>
+<anchor>40</anchor><h2>40. DevTools: Quickly view/edit CSS or JavaScript resources from the Elements panel. (https://umaar.com/dev-tips/40-open-in-sources-from-elements/)</h2>
+<p>If you see resources in the Elements Panel DOM tree, e.g.</p>
+<pre><code>&lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+</code></pre>
+<p>You can right click on them and select <em>Open</em>. The file opens in the Sources Panel where you can view the full source, or start editing it!</p>
+
+<anchor>40</anchor><h2>40. Быстрый просмотр и редактирование CSS или Javascript файлов в панели «Elements»</h2>
+<p>Теперь отображаемые в панели «Elements» CSS и JS-ресурсы могут быть открыты напрямую в панели «Sources» с возможностью полного редактирования.
+	Для этого выберите «Open» в контекстном меню соответствующего файла.
+</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/68a/668/690/68a668690f2040ff84f0a737539f8131.gif"/></spoiler>
+<anchor>41</anchor><h2>41. DevTools: Preview JavaScript values inline while debugging (https://umaar.com/dev-tips/41-inline-js-values/)</h2>
+<p>While debugging, you can preview the values of JavaScript variables at <em>that current point in time</em> - this even works with minified scripts (after you pretty print).</p>
+<p>To enable this feature (if it&apos;s not already):</p>
+<ol>
+	<li>Go to DevTools settings (the cog wheel).</li>
+	<li>Check General &gt; Sources &gt; Display variable values inline while debugging.</li>
+</ol>
+
+<anchor>41</anchor><h2>41. Отображение значений Javascript-переменных рядом с кодом в процессе отладки</h2>
+<p>В обновленном режиме отладки вы можете просматривать значения переменных буквально рядом с исполняющимся кодом.
+	Это работает даже для минифицированных скриптов после того, как вы их отформатируете.</p>
+<p>
+	Чтобы включить этот функционал (если он у вас не включен по умолчанию), сделайте следующее:
+<ol>
+	<li>Откройте настройки инструментов разработчика.</li>
+	<li>Включите галочку General → Sources → Display variable values inline while debugging.</li>
+</ol>
+</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/396/b45/bf9/396b45bf9755454283615bd081379f0a.gif"/></spoiler>
+<anchor>42</anchor><h2>42. DevTools: Use Network colour groups to easily identify a resource type (https://umaar.com/dev-tips/42-network-colour-group/)</h2>
+<p>Get a simple overview of resource types in the Network panel with the <em>Color-code resource types</em> feature. To enable (if not already)</p>
+<ol>
+	<li>Go to Settings (the cog wheel)</li>
+	<li>In the general section, find the network heading.</li>
+	<li>Check <em>Color-code resource types</em>.</li>
+</ol>
+<p>Each of Scripts, Stylesheets, documents, fonts and more will be coloured based on its type so you can easily understand what you&apos;re looking at without having to read the filename.</p>
+
+<anchor>42</anchor><h2>42. Использование цветовых групп панели «Network» для упрощения идентификации типа ресурса</h2>
+<p>Чтобы быстрее находить нужные ресурсы по типу в панели «Network», используйте функциональность «Color-code resource typesColor-code resource types».
+<ol>
+	<li>Откройте настройки инструментов разработчика.</li>
+	<li>Включите галочку General → Network → Color-code resource types.</li>
+</ol>
+</p>
+<p>Каждый тип ресурса (Scripts, Stylesheets, documents, fonts и др.) будет окрашен в свой собственный цвет. Теперь вы сможете быстрее понимать, на какой ресурс вы смотрите, без необходимости читать название файла.
+
+	<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/19d/983/be1/19d983be1e9f4bbebfcab71a5015a76b.gif"/></spoiler>
+	<anchor>43</anchor><h2>43. DevTools: Trigger a pseudo class (like hover) on an element (https://umaar.com/dev-tips/43-trigger-pseudo-class/)</h2>
+<p>You can trigger pseudo classes through DevTools, for example:</p>
+<ul>
+	<li>Hover</li>
+	<li>Active</li>
+	<li>Focus</li>
+	<li>Visited</li>
+</ul>
+<p>Also note, when you do this, a small orange indicator appears to the left of the node in the DOM tree so you know that its state has changed.</p>
+
+<anchor>43</anchor><h2>43. Активация псевдо классов DOM-элемента</h2>
+<p>Вы можете активировать псевдо-классы элементов в панели «Elements», такие как:</p>
+<ul>
+	<li>:hover</li>
+	<li>:active</li>
+	<li>:focus</li>
+	<li>:visited</li>
+</ul>
+<p>При таком изменении состояния элемента, слева от него появится оранжевый индикатор..</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/090/034/819/090034819721404e80033607f78a2fd0.gif"/></spoiler>
+<anchor>44</anchor><h2>44. DevTools: Perform Inspector inception by inspecting DevTools (https://umaar.com/dev-tips/44-inspect-the-inspector/)</h2>
+<p><a href="/dev-tips/19-dock-undock-shortcut">Undock DevTools</a> and then enter the keyboard shortcut <em>Cmd + Alt + i</em>. A new DevTools window opens with the target being the original DevTools window.</p>
+<p>You might find this useful if working on a custom DevTools theme, for example.</p>
+
+<anchor>44</anchor><h2>44. Инспектирование самих инструментов разработчика</h2>
+<p><a href="http://habrahabr.ru/company/mailru/blog/268777/#19">Открепите вкладку инструментов разработчика</a> и нажмите сочетание клавиш <em>Cmd + Alt + i</em>.
+	Откроется новое окно, в котором вы сможете инспектировать первоначальное окно инструментов.</p>
+<p>Это может быть полезным, например, при создании новой темы оформления для DevTools.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/393/905/c82/393905c82d504284a9a3ba50258b553a.gif"/></spoiler>
+<anchor>45</anchor><h2>45. DevTools: Select and execute a block of code in the Sources Panel (https://umaar.com/dev-tips/45-run-highlighted-code-block/)</h2>
+<p>You can use the shortcut <em>Ctrl + Shift + E</em> to run a block of highlighted code in the Sources Panel. In the clip, I am paused at a breakpoint, and want to access a bunch of variables attached to the <code>this</code> keyword. I select the block where they&apos;re defined and change:</p>
+<pre><code>this.foo = &apos;hello&apos;
+	this.bar = &apos;world&apos;
+</code></pre>
+<p>Into</p>
+<pre><code>foo = &apos;hello&apos;
+	bar = &apos;world&apos;
+</code></pre>
+<p>Finally, I execute that changed block of code so I have <code>foo</code> and <code>bar</code> in scope and can use them while debugging.</p>
+
+<anchor>45</anchor><h2>45. Запуск выбранного блока кода в панели «Sources»</h2>
+<p>Вы можете проверить выбранный сниппет кода в консоли при помощи шортката <em>Ctrl + Shift + E</em>. При этом выбранный код запустится в текущем контексте.
+
+	<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/620/5ec/7d4/6205ec7d486b452fa99fc962d0870cd3.gif"/></spoiler>
+	<anchor>46</anchor><h2>46. DevTools: Set a breakpoint based on a certain condition (https://umaar.com/dev-tips/46-conditional-breakpoint/)</h2>
+<p>When you set a breakpoint, you can make it conditional based on the result of an expression. Right click on the line gutter and select <em>Add Conditional Breakpoint</em> and enter your expression.</p>
+<p>If you have a callback like:</p>
+<pre><code>function callback(result, err) {
+	//set a conditional breakpoint based on the existence of err
+	}
+</code></pre>
+<p>You could set a conditional breakpoint based on the existence of <code>err</code>.</p>
+
+<anchor>46</anchor><h2>46. Установка условных точек останова</h2>
+<p>Устанавливая точку останова, вы можете сделать ее условной — зависимой от выполнения некоторого выражения.
+	Для этого выберите «Add Conditional Breakpoint» в контекстном меню строчки в панели «Sources» и введите выражение.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/1a4/304/1b4/1a43041b46ff4c06b33273f177dabbb0.gif"/></spoiler>
+<anchor>47</anchor><h2>47. DevTools: Shortcut to select the next occurrence (https://umaar.com/dev-tips/47-select-next-occurrence/)</h2>
+<p>In the Sources Panel editor, you can select the next occurrence with <em>Cmd + D</em>. If you end up going to far and you select something you do not want, use <em>Cmd + U</em> to undo the last selection.</p>
+
+<anchor>47</anchor><h2>47. Переход к следующему вхождению выбранной строки при помощи горячих клавиш</h2>
+<p>Вы можете переходить к следующему вхождению выбранной строки при помощи шортката <em>Cmd + D</em>. Если вы случайно выбрали не то, что хотели, используйте <em>Cmd + U</em>, чтобы снять выделение.
+
+	<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/048/90b/cd9/04890bcd9cfb4b1898a59d5e5ba53d10.gif"/></spoiler>
+	<anchor>48</anchor><h2>48. DevTools: Live Edit CSS in Sources and increment values easily (https://umaar.com/dev-tips/48-live-edit-css-sources/)</h2>
+<p>Two things:</p>
+<ol>
+	<li>You can edit CSS in the Sources Panel. Changes apply to the page in real time (no save required).</li>
+	<li><em>Alt + Up</em> to increment numeric values (<em>Alt + Down</em> to decrement).</li>
+</ol>
+
+<anchor>48</anchor><h2>48. Редактирование CSS-файла в панели «Sources» и упрощенное изменение значений CSS-свойств</h2>
+<p>Вы можете редактировать CSS-файл в панели «Sources» напрямую, при этом изменения применяются сразу же, не нужно сохранять файл.
+	Также используйте <em>Alt + ↑/↓</em> для изменения числовых значений CSS-свойств.</p>
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/808/4a1/123/8084a112358249ed93ecc9d86944dd52.gif"/></spoiler>
+
+</body>
+</html>
