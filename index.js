@@ -35,19 +35,46 @@ request(BASE_URL + '/dev-tips/', function (error, response, body) {
 
   $('.dt-archive ol li').each(function(i, e) {
     if (i >= SINCE && i < SINCE + COUNT) {
-      promises.push(processPost(BASE_URL + $(e).find('a').attr('href'), i + 1));
+      promises.push(processPost2(BASE_URL + $(e).find('a').attr('href'), i + 1)
+        .then(savePost));
     }
   });
 
-  vow.all(promises).done(formatOutput, function () {
+  /*vow.all(promises).done(formatOutput, function () {
     console.log('SOME PROMISES WERE REJECTED!', arguments);
-  });
+  });*/
 
 });
 
-function processPost(link, number) {
-  console.log('Processing post:', link);
+/**
+ *
+ * @param {Object} postObj
+ * @param {String} [postObj.link]
+ * @param {String} [postObj.title]
+ * @param {Number} [postObj.number]
+ * @param {String} [postObj.img]
+ * @param {String} [postObj.text]
+ * @param {String} [postObj.clearedText]
+ */
+function savePost(postObj) {
+  var enFileName = _.template('posts/${number}.en.html')({ number: postObj.number });
+  var ruFileName = _.template('posts/${number}.ru.html')({ number: postObj.number });
 
+  var stream = fs.createWriteStream(enFileName);
+  stream.write(postObj.title + '\n=====\n' + postObj.img + '\n=====\n' + postObj.text + '\n', function () {
+    stream.close();
+  });
+
+  var ruStream = fs.createWriteStream(ruFileName);
+  ruStream.write('\n=====\n' + postObj.img + '\n=====\n' + postObj.clearedText + '\n', function () {
+    ruStream.close();
+  });
+// не работает
+//  return vow.resolve();
+}
+
+function processPost2(link, number) {
+  console.log('Processing post2:', link);
   var def = vow.defer();
 
   request(link, function (error, response, body) {
@@ -76,14 +103,22 @@ function processPost(link, number) {
     }
 
     var contentNodes = $$('.dt-content > *').filter(function (i, node) {
-      return node.name.toLowerCase() !== 'img';
+      return ['img', 'aside'].indexOf(node.name.toLowerCase()) === -1
+        || node.classList.has('dt-share');
     });
 
     var contentStrings = contentNodes.map(function (i, node) {
       return $$('<div>').append(node).html();
     });
 
+    var clearedContentStrings = contentNodes.map(function (i, node) {
+      return $$('<div>').append(node).find(':not(pre)').each(function (i, e) {
+        $$(e).text('');
+      });
+    });
+
     var text = Array.prototype.slice.call(contentStrings).join('\n');
+    var clearedText = Array.prototype.slice.call(clearedContentStrings).join('\n');
 
     if (!text) {
       def.reject({ error: true, text: 'Text was not found', number: number, link: link });
@@ -95,7 +130,8 @@ function processPost(link, number) {
       number: number,
       title: title,
       img: src,
-      text: text
+      text: text,
+      clearedText: clearedText
     });
 
   });

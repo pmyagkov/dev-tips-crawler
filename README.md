@@ -30,8 +30,8 @@ Go to the habrastorage.org in Chrome and get the `habrastorage_sid` cookie.
 Then launch the script:
 
 ```
-cd images
-ls . | xargs -I% ../upload_pic.sh HABRASTORAGE_ID `pwd`/%
+cd PROJECT_DIR
+ls images | xargs basename | xargs -I% ./upload_pic.sh HABRASTORAGE_ID `pwd`/images/% | node insert_images_link.js
 ```
 
 You'll see each filename corresponding to an url to the uploaded picture.
