@@ -16,7 +16,6 @@ var SINCE = parseInt(argv['_'][0]);
 var COUNT = parseInt(argv['_'][1]);
 
 var BASE_URL = 'https://umaar.com';
-var INTRO = 'Бла Бла Бла';
 
 request(BASE_URL + '/dev-tips/', function (error, response, body) {
   if (error) {
@@ -39,11 +38,6 @@ request(BASE_URL + '/dev-tips/', function (error, response, body) {
         .then(savePost));
     }
   });
-
-  /*vow.all(promises).done(formatOutput, function () {
-    console.log('SOME PROMISES WERE REJECTED!', arguments);
-  });*/
-
 });
 
 /**
@@ -137,44 +131,4 @@ function processPost2(link, number) {
   });
 
   return def.promise();
-}
-
-function formatOutput(postsArray) {
-  var posts = postsArray.sort(function (a, b) {
-    return a.number - b.number;
-  });
-
-  // формируем заглавие
-  var output = INTRO + '\n\n';
-  output += '<strong>Содержание</strong>:\n';
-
-  output += _.template('<ol start="${since}">\n')({ since: SINCE + 1 });
-  posts.forEach(function (post) {
-    output += _.template('<li><a href="#${number}">${ title }</a></li>\n')(post);
-  });
-  output += '</ol>\n';
-
-  output += _.template('<ol start="${since}">\n')({ since: SINCE + 1 });
-  posts.forEach(function (post) {
-    output += _.template('<li><a href="#${number}">$</a></li>\n')(post);
-  });
-  output += '</ol>\n';
-
-  output += '<cut />\n';
-
-  posts.forEach(function (post) {
-    output += _.template('<anchor>${number}</anchor>\
-<h2>${number}. ${title} (${link})</h2>\n')(post);
-    output += post.text + '\n\n';
-    output += _.template('<anchor>${number}</anchor>\
-<h2>${number}. </h2>\n')(post);
-    output += post.text + '\n\n';
-    output += _.template('<spoiler title="Посмотреть скринкаст">\
-<img src="${img}"/>\
-</spoiler>\n')(post);
-  });
-
-  var stream = fs.createWriteStream(_.template('texts/${since} - ${last}.html')({since: SINCE + 1, last: SINCE + COUNT}));
-  stream.write(output);
-  stream.close();
 }

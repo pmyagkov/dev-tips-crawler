@@ -1,0 +1,166 @@
+Паша, вставь сюда текст. Это вступление.
+
+<strong>Содержание</strong>:
+&nbsp;&nbsp;&nbsp;49&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#49">Циклическое переключение между панелями при помощи шорткатов</a>
+&nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#50">Проверка и активация CSS media queries, а также нахождение этих правил в коде</a>
+&nbsp;&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#51">Предустановка разрешения нового устройства</a>
+&nbsp;&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#52">Улучшения полоски хлебных крошек в панели Elements</a>
+&nbsp;&nbsp;&nbsp;53&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#53">Печать стектрейса в консоли</a>
+&nbsp;&nbsp;&nbsp;54&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#54">Детектирование долгих фреймов (не путать с iframe)</a>
+&nbsp;&nbsp;&nbsp;55&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#55">Продвинутая фильтрация запросов в панели «Network»</a>
+&nbsp;&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#56">Поиск по проекту с возможностью указания файла</a>
+&nbsp;&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#57">Новый экспериментальный редактор раскладки страницы</a>
+&nbsp;&nbsp;&nbsp;58&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#58">Дублирование DOM-элементов</a>
+&nbsp;&nbsp;&nbsp;59&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#59">Просмотр скриншотов поведения страницы</a>
+&nbsp;&nbsp;&nbsp;60&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#60">Редактирование html-кода в панели «Console»</a>
+&nbsp;&nbsp;&nbsp;61&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#61">Простые клавиатурные трюки для управления панелей «Стили»</a>
+&nbsp;&nbsp;&nbsp;62&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#62">Выбор цвета, сгенерированного палитрой</a>
+&nbsp;&nbsp;&nbsp;63&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#63">Инкремент и декремент чисел в DOM-атрибутах</a>
+&nbsp;&nbsp;&nbsp;64&nbsp;&nbsp;&nbsp;<a href="https://habrahabr.ru/company/mailru/blog/278021/#64">Сетевые запросы в панели «Timeline»</a>
+<cut />
+<anchor>49</anchor><h2>49. Циклическое переключение между панелями при помощи шорткатов</h2>
+<p>Используйте <strong>Cmd + ]</strong>/<strong>Cmd + [</strong> для циклического переключениями между панелями в DevTools. Кроме этого существует шорткат <strong>Cmd + Alt + i</strong> для открытия инструментов разработчика.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/3aa/50a/19a/3aa50a19aaef41759852235c0e35b29b.gif"/></spoiler>
+<anchor>50</anchor><h2>50. Проверка и активация CSS media queries, а также нахождение этих правил в коде</h2>
+<p>В деле инспектирования и активации зарегистрированных CSS media queries вам поможет инструмент <strong>Media Query Inspector</strong>. Чтобы его открыть, в режиме устройства (Device Mode) кликните на иконку, напоминающую лестнику, в верхнем левом углу страницы.</p>
+<p>Вы можете активировать различные точки останова простым кликом на появившиеся полосы. При этом правых клик на них позволяет открыть конкретную место в коде, где эта Media Query определена.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/3a2/02b/23a/3a202b23a66a4c0fa8e99abcd85113eb.gif"/></spoiler>
+<anchor>51</anchor><h2>51. Предустановка разрешения нового устройства</h2>
+<p>Часто ли вам приходится эмулировать разрешение нового устройства? Режим <strong>Device Mode</strong> позволяет задать и запомнить профиль такого аппарата.</p>
+<ol>
+    <li>Откройте панель <strong>Devices</strong> в настройках DevTools.</li>
+    <li>Выберите <strong>Add custom device</strong>.</li>
+    <li>Введите информацию об устройстве.</li>
+    <li>Нажмите на <strong>Add Device</strong>.</li>
+</ol>
+<p>Добавленное выше устройство появится в меню <strong>Devices</strong> в верхнем левом углу.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/a65/43e/6ca/a6543e6ca15f48c8814ddcaf237f2447.gif"/></spoiler>
+<anchor>52</anchor><h2>52. Улучшения полоски хлебных крошек в панели Elements</h2>
+<p>А вы знали, что в панели <strong>Elements</strong> есть "хлебные крошки"? Они могут помочь вам отслеживать полную вложенность, когда вы работаете с DOM-деревом.</p>
+<p>Активируйте экспериментальный <strong>Material Design</strong> в Canary и вы получите несколько приятных фич:</p>
+<ul>
+    <li>В новом дизайне "хлебные крошки" смотрятся гораздо лучшее.</li>
+    <li>Теперь они находятся сверху панели Elements, что улучшает их видимость.</li>
+    <li>В общем, интерфейс DevTools стал выглядеть более структуризированным.</li>
+</ul>
+<p>Не забывайте, что по клику на конкретный сегмент "хлебных крошек" будет подсвечен соответствующий DOM-элемент.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/716/15e/c8f/71615ec8fef3442b8fca68fe2a1c6061.gif"/></spoiler>
+<anchor>53</anchor><h2>53. Печать стектрейса в консоли</h2>
+<p>Вызов функции <code>console.trace()</code> может вам помочь быстро и легко получить стектрейс для лучшего понимания потока управления вашей программы.</p>
+<p>Его особенности:</p>
+<ul>
+    <li>Вы получите имена файлов и номера строк, кликнув по которым вы переместитесь в соответствующее место кода.</li>
+    <li><code>console.trace</code> совместим со сниппетами.</li>
+    <li>Этот метод является часть <strong>Console API</strong> (наряду с <code>console.log</code>).</li>
+</ul>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/115/1f0/2fa/1151f02fa5614313acd6da69fde79920.gif"/></spoiler>
+<anchor>54</anchor><h2>54. Детектирование долгих фреймов (не путать с iframe)</h2>
+<p>Панель <strong>Timeline</strong> в Canary может подсвечивать некоторые фреймы красным. Это предупреждение означает, что время нахождения в нем вышло за рамки 18мс.</p>
+<p>При клике на конкретный фрейм вы получите детальную информацию о причинах возникновения проблемы.</p>
+<p>Если частота обновления монитора 60Гц (так делают большинство дисплеев), то на фрейм должно приходится не более 16мс, потому что 1000мс / 60 кадров в секунду = ~16мс.</p><em></em>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/4f9/935/dff/4f9935dffe074832b617d9cfc94facbf.gif"/></spoiler>
+<anchor>55</anchor><h2>55. Продвинутая фильтрация запросов в панели «Network»</h2>
+<p>Для того, чтобы уменьшить количество найденных сетевых запросов, используйте продвинутую фильтрацию:</p>
+<ul>
+    <li><code>larger-than:100</code> выведет вам все ресурсы, размер которых превышает 100 байт.</li>
+    <li><code>-larger-than:50k</code> найдет все запросы, не превышающие 50Кб.
+    </li>
+    <li><code>status-code:200</code> покажет все ответы со статусом <code>200</code>.</li>
+</ul>
+<p>Вот еще несколько запросов, с которыми вы можете поэкспериментировать:</p>
+<ul>
+    <li>domain</li>
+    <li>mime-type</li>
+    <li>scheme</li>
+    <li>set-cookie-domain</li>
+    <li>set-cookie-value</li>
+    <li>has-response-header</li>
+</ul>
+<p>Автодополнение поиска поможет вам обнаружить все фильтры и определить тип их значений. При этом все показанные значения взяты из записанных при последней сессии.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/2dc/195/237/2dc195237cd64e93807b3c113a245776.gif"/></spoiler>
+<anchor>56</anchor><h2>56. Поиск по проекту с возможностью указания файла</h2>
+<p>Вы можете искать по всем файлам при помощи шортката <strong>Cmd + Opt + F</strong> / <strong>Ctrl + Shift + F</strong>. Если поиск вернет слишком много результатов, вы можете ограничить выборку, указав конкретный файл, поменяв запрос <code>query</code> на <code>query file:main.js</code> или <code>query file:main</code>.
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/eaa/93d/cfa/eaa93dcfa6d0420ca5b6b8f4c3acd7aa.gif"/></spoiler>
+<anchor>57</anchor><h2>57. Новый экспериментальный редактор раскладки страницы</h2>
+<p><strong>Layout Editor</strong> — скрытый эксперимент средств разработчика Canary. Хотя некоторая функциональность из этого инструмента может измениться или вовсе исчезнуть, я расскажу кое-что о нем:</p>
+<ul>
+    <li>Когда вы инспектируете элемент, рядом с его границами появляются маркеры.</li>
+    <li>Потянув за них, вы измените отступы (<strong>margin</strong> или <strong>padding)</strong> этого узла.</li>
+    <li>Эти маркеры также отображают текущее значение отступов в процессе их изменения.</li>
+</ul>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/1f2/264/631/1f226463195d4e2ba4da9a7410ada443.gif"/></spoiler>
+<anchor>58</anchor><h2>58. Дублирование DOM-элементов</h2>
+<p>DevTools позволяют очень просто модифицировать DOM-дерево, не меняя при этом куски html-кода.</p>
+<ul>
+    <li>Кликните на элементе в панели <strong>Elements</strong> правой кнопкой и выберите <strong>Copy</strong>.</li>
+    <li>Теперь вы можете вставить этот элемент в текстовый редактор или, для прототипирования, в любое другое место DOM-дерева. Скопированный узел добавляется в качестве ребенка выбранного элемента. В видео я поднимался от дочернего узла к родительскому при помощи <strong>←</strong> для того, чтобы вставить элемент в него.</li>
+</ul>
+<p>Кроме этого вам доступка функция <strong>Cut</strong> (также она вызывается по <strong>Cmd + x</strong> / <strong>Ctrl + x</strong>). В противовес копирования, она переместит элемент на новое место в дереве.</p>
+<p><em>Эксперимент:</em> Попробуйте добавить больше ссылок в хедер/футер какого-нибудь сайта при помощи техники копирования-вставки и выяснить, какие места верстки требуют улучшения!</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/629/b3b/02b/629b3b02bc594e70986808f39ba712ca.gif"/></spoiler>
+<anchor>59</anchor><h2>59. Просмотр скриншотов поведения страницы</h2>
+<p>Панель <strong>Timeline</strong> позволяет вам снимать скриншоты поведения страницы. При перемещении курсова от начала к концу записи вы увидите визуальное состояние веб-приложения, изменяющееся во времени.</p>
+<p>Далее вы сможете сопоставить фреймы с пиками или предупреждениями с полученными скриншотами, чтобы определить, почему страница работала с неудовлетворительной производительностью.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/a0d/381/1f1/a0d3811f196341b8b4f5288298a2bf18.gif"/></spoiler>
+<anchor>60</anchor><h2>60. Редактирование html-кода в панели «Console»</h2>
+<p>Контекстное меню DOM-элемента, знакомое вам по панели <strong>Elements</strong> также доступно и в панели <strong>Console</strong>.
+<ol>
+    <li>Отлогируйте DOM-узел в консоль и вызовите его контекстное меню.</li>
+    <li>Выберите <strong>Edit as HTML</strong> или <strong>Edit Text</strong> и отредактируйте его.</li>
+    <li>Заметьте, что оригинальный узел в панели <strong>Elements</strong> будет также изменен.</li>
+</ol>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/468/431/6d8/4684316d8a254c618c8a0d8885541457.gif"/></spoiler>
+<anchor>61</anchor><h2>61. Простые клавиатурные трюки для управления панелей «Стили»</h2>
+<p>Клавиша <strong>Tab</strong> позволяет вам навигироваться по CSS-свойствам в следующей порядке:</p><em></em>
+<ul>
+    <li>Селектор (например, <strong>h1</strong>)</li>
+    <li>Свойство (например, <strong>color</strong>)</li>
+    <li>Значение (например, <strong>green</strong>)</li>
+</ul>
+<p>В случае достижения конца CSS-правила курсор будет перенесен на следующее.</p>
+<p>Кроме этого сочетание <strong>Shift + Tab</strong> переключает фокус в обратную сторону.</p>
+<p>Предположим, в поле названия правила вы начали вводить <code>back</code> с намерением выбрать <code>background</code> из вариантов выпадающей подсказки, но случайно ошиблись и выбрали <code>background-color</code>. В этом случае просто нажмите клавишу <strong>Backspace</strong>, и вы будете перемещены обратно к редактированию названия свойства.</p>
+<p>Для удаления свойства вы можете стереть его название или значение при помощи <strong>Backspace</strong>, а дальше просто нажмите <strong>Enter</strong>.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/b46/750/80a/b4675080afd849dbb0fb97899b6af574.gif"/></spoiler>
+<anchor>62</anchor><h2>62. Выбор цвета, сгенерированного палитрой</h2>
+<p>Инструмент выбора цвета (<strong>Color Picker</strong>) в Canary DevTools снова получил обновление. Теперь он получил новую цветовую палитру, генерирующуюся автоматически на основании набора цветов, уже представленных в ваших таблицах стиле.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/c71/777/47c/c7177747c9d24fe6b5b93fba4d16ed8e.gif"/></spoiler>
+<anchor>63</anchor><h2>63. Инкремент и декремент чисел в DOM-атрибутах</h2>
+<p>Вы можете модифицировать DOM-атрибут так же, как и название класса при помощи клавиш <strong>↑</strong>/<strong>↓</strong>. Предположим, что на некотором элементе висит класс <code>span_1_of_7</code>, стрелка <strong>↑</strong> в этом случае трансформирует его в <code>span_2_of_7</code>.</p>
+<p>Эта возможность может быть очень полезной, если вы используете систему CSS-сеток, которая включает в имена классов элементов конкретные числа.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/342/f43/6b2/342f436b28614c36a3635a91237c9bfd.gif"/></spoiler>
+<anchor>64</anchor><h2>64. Сетевые запросы в панели «Timeline»</h2>
+<p>Разработчики Canary DevTools сделали новый эксперимент <strong>Network on Timeline</strong>: теперь панель<strong>Timeline</strong> отображает сетевые запросы, которые могли бы влиять на процесс отображения страницы.</p>
+
+
+<spoiler title="Посмотреть скринкаст"><img src="https://habrastorage.org/files/5a6/d0a/ae9/5a6d0aae961f4d31a276652b2c8822b2.gif"/></spoiler>

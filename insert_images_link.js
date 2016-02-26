@@ -1,6 +1,7 @@
 var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
+var consts = require('./consts');
 
 var readline = require('readline');
 
@@ -13,8 +14,6 @@ var rl = readline.createInterface({
 
 var parts;
 var rootDir = path.dirname(__filename);
-var POSTS_FOLDER = 'posts';
-var SPLIT_EXPR = '=====';
 
 rl.on('line', function (line) {
   parts = _(line.split(' ')).map(function (l) {
@@ -30,14 +29,14 @@ rl.on('line', function (line) {
 
   var reResult = /^\d+/.exec(parts[0]);
   if (!reResult) {
-    console.error(' Node integer part in images filename');
+    console.error(' Node integer part in images fileName');
     process.exit(1);
   }
 
   var postNumber = reResult[0];
   console.log(' Post number', postNumber);
 
-  var folderPath = path.join(rootDir, POSTS_FOLDER);
+  var folderPath = path.join(rootDir, consts.POSTS_FOLDER);
 
   var folderFiles = fs.readdirSync(folderPath);
   folderFiles
@@ -45,7 +44,7 @@ rl.on('line', function (line) {
       return filename.indexOf(postNumber) > -1;
     })
     .forEach(function (filename) {
-      var filePath = path.join(rootDir, POSTS_FOLDER, filename);
+      var filePath = path.join(rootDir, consts.POSTS_FOLDER, filename);
       console.log(' Found file:', filePath);
 
       insertImageLinkToPost(parts[1], filePath);
@@ -54,7 +53,7 @@ rl.on('line', function (line) {
 
 function insertImageLinkToPost(link, filePath) {
   var fileContent = fs.readFileSync(filePath, 'utf8');
-  var split = fileContent.split(SPLIT_EXPR);
+  var split = fileContent.split(consts.SPLIT_EXPR);
 
   if (split.length <= 1) {
     console.log(' Can\'t process file', filePath, '. No split parts!');
@@ -62,7 +61,7 @@ function insertImageLinkToPost(link, filePath) {
   }
 
   split[1] = '\n' + link + '\n';
-  fileContent = split.join(SPLIT_EXPR);
+  fileContent = split.join(consts.SPLIT_EXPR);
   fs.writeFileSync(filePath, fileContent, 'utf8');
 
   console.log(' Content to file is written');

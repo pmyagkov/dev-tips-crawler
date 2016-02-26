@@ -3,7 +3,7 @@
 ## How to crawl text
 ```
 cd PROJECT_DIR
-node index.js SINCE_POST COUNT
+node download_posts.js SINCE_POST COUNT
 ```
 
 * `SINCE` – 0-based number of a post to start with
