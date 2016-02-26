@@ -1,0 +1,22 @@
+DevTools: The larger-than advanced Network Panel filter, and a few others
+=====
+/assets/images/dev-tips/network-advanced-filter.gif
+=====
+<p>Use the Advanced Network Panel Filtering feature to narrow down resources to exactly what you want to find. For example:</p>
+<ul>
+    <li><code>larger-than:100</code> will find and filter for resources larger than 100 bytes</li>
+    <li>You can negate a query by prepending a &apos;-&apos; to it. E.g. <code>-larger-than:50k</code> to find resources
+        which are <em>not</em> larger than 50k.
+    </li>
+    <li><code>status-code:200</code> to find resources with a status code response of <code>200</code>.</li>
+</ul>
+<p>A few other queries which you can experiment with:</p>
+<ul>
+<li>domain</li>
+<li>mime-type</li>
+<li>scheme</li>
+<li>set-cookie-domain</li>
+<li>set-cookie-value</li>
+<li>has-response-header</li>
+</ul>
+<p>Note: you get autocomplete for these, it makes it easier to discover query types and their corresponding values. The values which autocomplete will exist in your current network recording.</p>
